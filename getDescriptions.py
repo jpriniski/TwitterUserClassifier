@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
 """
-This program will enable you to get the descriptions of up to 100 Twitter Users
-per run. If the code runs correctly, a text file named user_descriptions.txt
+This program will enable you to get the descriptions of up to 300 Twitter Users
+per run. If the code runs correctly, a csv file named user_descriptions.csv
 will store the Twitter account descriptions next to the usernames.  This program
-will also format nicely with a .csv file as well.  Change the name of
-user_descriptions.txt to user_descriptions.csv.
+will also format nicely with a .txt file as well.  Change the name to
+user_descriptions.txt from user_descriptions.csv.
 
-
+Due to limits in the Twitter API, an app is rate limited after 100 Twitter user information requests. Therefore, you will need to 
+create 3 apps (and have 3 sets of credentials) to run this code properly.  
 
 System requirements.  You must ahve the following downloaded and installed on
 your computer: python3, json, codes, and twython.
@@ -17,7 +18,6 @@ your computer: python3, json, codes, and twython.
 
 import sys, string, json, codecs
 from twython import Twython
-
 
 
 
@@ -46,7 +46,7 @@ description_file = "user_descriptions.csv"
 
 
 #We input the Twitter credentials as the following for keys.  If you run this
-#program, please generate your own set of keys via apps.twitter.com .
+#program, generate your own set of keys via apps.twitter.com .
 
 
 #credentials for app gatekeep 1
