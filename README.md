@@ -7,5 +7,5 @@ bag-of-words algorithim.
 
 A list of files and their functionalities:
 
-1. getDescrtiptions.py : collect up to 600 Twitter User Descriptions outputed to a .csv file.
-2. 
+1. getTwitterUserInfor.py : collect information on up to 300 Twitter User Descriptions outputed to a .csv file.
+
