@@ -1,21 +1,20 @@
 #!/usr/bin/env python
 
-
 from twython import Twython
 import sys, string, json, codecs
 
 class Connection:
-    """A connection object has the following properties
+    """A connection object has the following properties:
 
     Attributes:
-        No. of Credential sets: An integer values between 1-3. Due to rate limits, sometimes it is useful to create
-        multiple Twitter apps to increase the amount of data we can collect.
-        Therefore, if you have three sets of credentials, you can collect three times the amount of data.
-
         Access tokens: ak, ask, at, ats.
 
         The set of credentials gained from apps.Twitter.com
 
+
+    Functionalities: allow users to collect data on up to 100 different Twitter Users. In the near future, this program will
+    allow users to collect Twitter data without witnessing any of the backend code. 
+    
     """
 
     def __init__(self, ak1, ask1, at1, ats1):
