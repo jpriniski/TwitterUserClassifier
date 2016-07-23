@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 
 """
-This program will enable you to get the descriptions of up to 100 Twitter Users
+This program will enable you to get the descriptions of up to 300 Twitter Users
 per run. If the code runs correctly, a text file named user_descriptions.txt
 will store the Twitter account descriptions next to the usernames.  This program
 will also format nicely with a .csv file as well.  Change the name of
 user_descriptions.txt to user_descriptions.csv.
 
-
+NOTE: to collect the 300 Twitter User Descriptions per run, you must create 3 seperate sets of access tokens.  
 
 System requirements.  You must ahve the following downloaded and installed on
 your computer: python3, json, codes, and twython.
