@@ -84,7 +84,7 @@ def main():
         1. Set the directory to your user ID and user descriptions file
         2. Go through the collect_data method if interested
         3.Go through the listify data if interested
-        3. We will print the bag of words for the text.  However, some problems still need to be ironed out.
+        3. We will print the bag of words for the text. However, some problems still need to be iorned out.
     """
     dir = ""
     data1 = collect_data(dir_to_data=dir)
