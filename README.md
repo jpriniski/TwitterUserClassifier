@@ -1,5 +1,5 @@
 # TwitterGatekeeping
-Python code that cleans, collects, and prepares Twitter user data for Dr. Hazel Kwon's Audience Gatekeeping research project. 
+Python code (3.4.0) that cleans, collects, and prepares Twitter user data for Dr. Hazel Kwon's Audience Gatekeeping research project. 
 The code is built upon the Twython package and uses scikit-learn for Machine Learning and the Natural Language Toolkit for 
 its corpus on stop words and implementation of its Snowball word stemmer algorithim. 
 
