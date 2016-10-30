@@ -1,3 +1,17 @@
+"""
+FTAC.py (Random) Forest Twitter Account Classification. 
+Arizona State University
+J. Hunter Priniski 
+Hazel Kwon 
+
+(Random) Forest Twitter Account Classification uses a Random Forest classification model to classify Twitter accounts as 
+'personal' or 'unpersonal'. The model does so by creating a Bag-of-words for the descriptions associated with the accounts.
+We generally experience prediction accuracy rates of between 85%-95% with this model. 
+
+For any questions, please don't hesitate to email me at jprinisk@asu.edu.
+
+"""
+
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.snowball import SnowballStemmer
