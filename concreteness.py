@@ -1,9 +1,25 @@
 import csv, codecs
 
 """
-concreteness.py will calculate the concreteness rating for english sentences.
+concreteness.py 
+Arizona State University
+J. Hunter Priniski (john.priniski@asu.edu)
+Hazel Kwon (hazel.kwon@asu.edu)
+
+
+Concreteness.py will calculate the concreteness rating for english sentences.
 
 Word ratings are taken from Marc Brysbaert, Warriner, Kuperman (http://crr.ugent.be/papers/Brysbaert_Warriner_Kuperman_BRM_Concreteness_ratings.pdf)
+
+
+
+*** TO RUN THIS SCRIPT ***
+Declare the directories to your tweets (or other data) and concreteness ratings in main().  Then just run the script.  
+Your concreteness ratings will be saved in the same directory but with a _with_ratings.csv appended to the end.  
+i.e., if your tweet file directory is desktop/tweets.csv, your tweet file with ratings directory will be saved at:
+desktop/tweets_with_ratings.csv
+
+
 
 """
     
@@ -46,8 +62,9 @@ def write(dir_to_text, text_ratings):
     
     
 def main():
-    
+    #in these two variables, load in the directories.  Tweets should be loaded in a single column and in utf-8 format
     dir_to_tweets = ""
+    #let this variable represent the directory to the concreteness ratings. See paper mentioned above for more information on this
     dir_to_concreteness = ""
     tweet_concreteness = []
 
