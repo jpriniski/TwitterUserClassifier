@@ -22,18 +22,21 @@ Scripts:
 Additional information:
 
 To use account_classification.py, the data *must* be structured as bellow.
+
 training data:
-user_ID           Description         Personal
-*some id*         *some description*   1
-*some id*         *some description*   0
-*some id*         *some description*   1
+
+user_ID'\t'Description'\t'Personal
+*some id*'\t'*some description*'\t'1
+*some id*'\t'*some description*'\t'0
+*some id*'\t'*some description*'\t'1
   ...
   
 testing data:
-user_ID           Description         
-*some id*         *some description*   
-*some id*         *some description*   
-*some id*         *some description*  
+
+user_ID'\t'Description         
+*some id*'\t'*some description*   
+*some id*'\t'*some description*   
+*some id*'\t'*some description*  
   
 Where 1 = personal, 0 = nonpersonal.  user_ID can either be a string or an int data type. Furthermore, both the training and testing data should be saved as a .txt file with a tab ('\t') separator. 
 **Make sure all data is saved in utf-8 format. To encode entire data frames we recommend using R. 
