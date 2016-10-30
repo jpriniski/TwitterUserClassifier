@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 
 """
+get_twitter_user_descriptions.py
+Arizona State University
+J. Hunter Priniski
+Hazel Kwon
+
+
 This program will enable you to get the descriptions of up to 300 Twitter Users
 per run. If the code runs correctly, a text file named user_descriptions.txt
 will store the Twitter account descriptions next to the usernames.  This program
