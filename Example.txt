@@ -1,0 +1,34 @@
+
+#You must load in the module's methods. 
+>>> import RandomForestAccountClassification as r
+
+# Create a training object
+>>> a = r.FTAC()
+
+# Call the study method on the object. Pass the method as a string that is a directory to your txt or csv file of training #data.
+
+# For more info on how the training and testing data sets should be formatted, consult the readme file. 
+
+>>> a.study('Dir/to/training/set')
+>>> import pandas as pd
+
+#create a testing variable.  
+>>> test = a.collect('Dir/to/testing/set')
+>>> clean_test_reviews = []
+>>> clean_test_descriptions = []
+>>> num_descriptions = len(test["Description"])
+>>> for i in range(0,num_descriptions):
+...     if((i+1) % 1000 ==  0 ):
+...         print("Review %d of %d\n" % (i+1, num_descriptions))
+...     clean_description = a.clean(test['Description'][i])
+...     clean_test_descriptions.append(clean_description)
+
+>>> test_data_features = a.v.transform(clean_test_descriptions)
+>>> test_data_features = test_data_features.toarray()
+>>> result = a.f.predict(test_data_features)
+>>> output = pd.DataFrame(data={"id": test["UserID"],
+                           "Description": test["Description"],
+                           "Personal": result})
+#Make sure to write your testing output to a .csv or .txt file (or both). 
+>>> output.to_csv('test_output.txt', index = False, quoting = 3)
+>>> output.to_csv('test_output.csv', index = False, quoting = 3)
