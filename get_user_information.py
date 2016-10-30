@@ -1,5 +1,16 @@
 #!/usr/bin/env python
 
+"""
+get_user_information.py
+Arizona State University
+J. Hunter Priniski
+Hazel Kwon
+
+A more generalized version of get_user_descriptions.py, such that it enables you to collect other data than just descriptions. 
+
+"""
+
+
 from twython import Twython
 import sys, string, json, codecs
 
