@@ -1,5 +1,6 @@
 import nltk
 from nltk.corpus import stopwords
+from nltk.stem.snowball import SnowballStemmer
 import pandas as p
 import re
 
@@ -23,10 +24,13 @@ class FTAC:
                         tokenizer=None,
                         preprocessor=None,
                         stop_words=None,
-                        max_features=5000)
+                        #5000, 500
+                        max_features=500)
     f = RandomForestClassifier(n_estimators=100)
     forest = ''
     result = ''
+
+    stemmer = SnowballStemmer('english')
 
     def study(self, directory):
         self.train_dir = directory
@@ -35,38 +39,51 @@ class FTAC:
         self.train_data_features = self.bag_it(self.clean_train_descriptions)
         self.learn()
 
-    def test(self, directory):
-        self.test_dir = directory
-        self.test = self.collect(self.test_dir)
-        self.start(self.test, self.clean_test_descriptions)
-        self.test_data_features = self.bag_it(self.clean_test_descriptions)
-        self.testing()
-
-
     def collect(self, dir):
 
-        return p.read_csv(dir, header = 0, delimiter = '\t', quoting=3)
-
-    def remove_descriptions(self, file):
-
+        return p.read_csv(dir, header = 0, sep = '\t', quoting=3)
 
 
     def start(self, descriptions, descriptions_array):
 
         num_descriptions = len(descriptions)
 
-        for i in range(0,num_descriptions):
+        for i in range(0,num_descriptions):#need to call the stem function here, remove it if you don't want it
             descriptions_array.append(self.clean(self.train["Description"][i]))
 
 
     def clean(self, raw):
 
-        letters_only = re.sub("[^a-zA-Z]", " ", raw)
+        letters_only = re.sub("[^a-zA-Z#@]", " ", raw)
+
         words = letters_only.split()
-        stop_words = set(stopwords.words("english"))
+
+        for i in range(0, len(words)):
+
+            if "#" in words[i]:
+                s = words[i].split('#')
+                words[i] = '# '.join(s)
+            if "@" in words[i]:
+                s = words[i].split('@')
+                words[i] = '@ '.join(s)
+            if "http" in words[i]:
+                s = words[i].split('http')
+                words[i]= "http".join(s)
+
+
+        total_stop_words = set(stopwords.words("english"))
+        removed_stop_words = set(stopwords.words("english")[0:20])
+        stop_words = total_stop_words - removed_stop_words
         content_words = [w for w in words if not w in stop_words]
 
         return " ".join(content_words)
+
+    def stem(self, content_words):
+        #take the content words and stem them
+        words = content_words.split()
+        roots = [self.stemmer.stem(word) for word in words]
+
+        return " ".join(roots)
 
     def bag_it(self, descriptions):
 
@@ -79,14 +96,8 @@ class FTAC:
         self.subject = np.array(self.personal).astype(int)
         self.forest = self.f.fit(self.train_data_features, self.subject)
 
-#We need to fix the dimensionality of this vector
 
-    def testing(self):
-        self.result = self.f.predict(self.test_data_features)
-        output = p.DataFrame( data = {"id":self.test["UserID"],
-                                           "Description":self.test["Description"],
-                                           "Personal":self.test["Personal"]})
-        output.to_csv("bag_of_words_model.csv", index=False, quoting = 3)
+
 
 
 
