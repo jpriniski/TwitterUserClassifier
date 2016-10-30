@@ -58,7 +58,7 @@ def write(dir_to_text, text_ratings):
     writer.writerows(text_ratings)
     data.close()
 
-    print("Script Finished: " + dir_to_text)
+    print("Script Finished. Concreteness scores saved to: " + dir_to_text)
     
     
 def main():
