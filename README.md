@@ -24,6 +24,8 @@ Scripts:
                           
 4.  concreteness.py. To understand the concreteness of a tweet (how concrete of language a user employs in their tweets gives us  a proximal coefficient, which informs us about how close the tweeter is to the event).  This function will calculate the average concreteness rating of a sentence (total concreteness score divided by the amount of concrete words). The concreteness ratings are taken from Marc Brysbaert, Amy Beth Warriner, and  Victor Kuperman's work (2014) found here (http://crr.ugent.be/papers/Brysbaert_Warriner_Kuperman_BRM_Concreteness_ratings.pdf)
 
+5. ManuallyLabeled_All.csv : The csv file includes 8945 user profile description that human coders labeled as either general public user profile (1) or not. The profile texts were collected using StreamAPI in the context of Mesa Shooting in Metro-Phoenix area (2015); Boston Bombing (2013); Bruessls Airport Bombing (2016); Quebect Mosque Shooting (2017); and the random sampling of profile texts in 2017. 
+
 Additional information:
 
 To use account_classification.py, the data *must* be structured as bellow.
