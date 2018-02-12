@@ -45,7 +45,7 @@ user_ID'\t'Description
 *some id*'\t'*some description*   
 *some id*'\t'*some description*  
   
-Where 1 = personal, 0 = nonpersonal.  user_ID can either be a string or an int data type. Furthermore, both the training and testing data should be saved as a .txt file with a tab ('\t') separator. 
+Where 1 = general public users, 0 = others (mainly media professional, inistitutional, and promotional accounts).  user_ID can either be a string or an int data type. Furthermore, both the training and testing data should be saved as a .txt file with a tab ('\t') separator. 
 **Make sure all data is saved in utf-8 format. To encode entire data frames we recommend using R. 
  
 
