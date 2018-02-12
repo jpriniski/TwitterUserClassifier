@@ -2,6 +2,7 @@
 
 TwitterClassification is a set of scripts and methods that collect and analyze Twitter user data. This repository includes descipriton for a Twitter user sampling method that specifically helps filter outs institutional users (mostly media, journalism professionals). 
 The further description of the methods and the background of the study are found in
+
 K. Hazel Kwon, J. Hunter Priniski, & Monica Chadha (Forthcoming). Disentangling user samples: A machine learning approach to proxy-population mismatch in Twitter research. Communication Methods and Measures. 
 
 CITATION: Please cite the journal publication above when using this repository.
