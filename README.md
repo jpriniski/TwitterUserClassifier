@@ -7,6 +7,9 @@ K. Hazel Kwon, J. Hunter Priniski, & Monica Chadha (2018). Disentangling user sa
 
 CITATION: Please cite the journal publication above when using this repository.
 
+Files: 
+1. Kwon et al. (2018): The article 
+2. ManuallyLabeled_All.csv : The csv file includes 8945 user profile description that human coders labeled as either general public user profile (1) or not. The profile texts were collected using StreamAPI in the context of Mesa Shooting in Metro-Phoenix area (2015); Boston Bombing (2013); Bruessls Airport Bombing (2016); Quebect Mosque Shooting (2017); and the random sampling of profile texts in 2017. 
 
 Dependicies:
 1. Twython 
@@ -22,9 +25,7 @@ Scripts:
 
 3. account_classification.py: Classes and methods that implement supervised machine learning protocols that classify Twitter profiles as whether a profile is a general public user account or not (such as a business', public figure's, news reporter's, promotional accounts). For references on how to use this code, see below.  Also, references the example.txt document.   
                           
-4. ManuallyLabeled_All.csv : The csv file includes 8945 user profile description that human coders labeled as either general public user profile (1) or not. The profile texts were collected using StreamAPI in the context of Mesa Shooting in Metro-Phoenix area (2015); Boston Bombing (2013); Bruessls Airport Bombing (2016); Quebect Mosque Shooting (2017); and the random sampling of profile texts in 2017. 
-
-5.  concreteness.py. To understand the concreteness of a tweet (how concrete of language a user employs in their tweets gives us  a proximal coefficient, which informs us about how close the tweeter is to the event).  This function will calculate the average concreteness rating of a sentence (total concreteness score divided by the amount of concrete words). The concreteness ratings are taken from Marc Brysbaert, Amy Beth Warriner, and  Victor Kuperman's work (2014) found here (http://crr.ugent.be/papers/Brysbaert_Warriner_Kuperman_BRM_Concreteness_ratings.pdf)
+4.  concreteness.py. To understand the concreteness of a tweet (how concrete of language a user employs in their tweets gives us  a proximal coefficient, which informs us about how close the tweeter is to the event).  This function will calculate the average concreteness rating of a sentence (total concreteness score divided by the amount of concrete words). The concreteness ratings are taken from Marc Brysbaert, Amy Beth Warriner, and  Victor Kuperman's work (2014) found here (http://crr.ugent.be/papers/Brysbaert_Warriner_Kuperman_BRM_Concreteness_ratings.pdf)
 
 Additional information:
 
