@@ -2,7 +2,9 @@
 FTAC.py (Random) Forest Twitter Account Classification. 
 Arizona State University
 J. Hunter Priniski 
-Hazel Kwon 
+K. Hazel Kwon 
+NOTE: Please use the citation below when using this code.
+Kwon, K. H., Priniski, J. H., & Chadha, M. (Accepted). Disentangling user samples: A machine learning approach to proxy-population mismatch in Twitter research. Communication Methods and Measures.
 
 (Random) Forest Twitter Account Classification uses a Random Forest classification model to classify Twitter accounts as 
 'personal' or 'unpersonal'. The model does so by creating a Bag-of-words for the descriptions associated with the accounts.
