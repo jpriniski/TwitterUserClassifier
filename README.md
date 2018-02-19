@@ -8,7 +8,7 @@ K. Hazel Kwon, J. Hunter Priniski, & Monica Chadha (2018). Disentangling user sa
 CITATION: Please cite the journal publication above when using this repository.
 
 Files: 
-1. Kwon et al. (2018): The article 
+1. 18CMM: The method paper (published)
 2. ManuallyLabeled_All.csv : The csv file includes 8945 user profile description that human coders labeled as either general public user profile (1) or not. The profile texts were collected using StreamAPI in the context of Mesa Shooting in Metro-Phoenix area (2015); Boston Bombing (2013); Bruessls Airport Bombing (2016); Quebect Mosque Shooting (2017); and the random sampling of profile texts in 2017. 
 
 Dependicies:
